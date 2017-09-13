@@ -7,7 +7,7 @@ class Poll extends Component {
         super(props)
         
         this.state = {
-            pollTeams : ''
+            pollTeams : []
         }
     }
 
@@ -28,7 +28,19 @@ class Poll extends Component {
     }
 
     renderPoll = () => {
+        const position = ['1ST', '2ND', '3RD']
 
+        return this.state.pollTeams.map((team, index) => {
+            return (
+                <div
+                    key={team.id}
+                    className="poll-item">
+                    <img alt={team.name} src={`/images/teams/${team.logo}`} />
+                    <h4>{position[index]}</h4>
+                    <div>{team.count} Votes</div>
+                </div>
+            )
+        })
     }
  
     render() {
@@ -36,7 +48,7 @@ class Poll extends Component {
             <div className="home-poll">
                 <h3>Who will be the next champion ?</h3>
                 <div className="poll-container">
-                    {this.renderPoll}    
+                    {this.renderPoll(this.state.pollTeams)}    
                 </div> 
             </div>
         );
