@@ -130,3 +130,88 @@ footer {
     font-size: 10px;
     line-height: 0;
 }
+
+.home-blocks {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.home-blocks .block {
+    flex-grow: 1;
+    position: relative;
+    height: 270px;
+    overflow: hidden;
+}
+
+.home-blocks .block.lg {
+    width: 50%;
+}
+
+.home-blocks .block.md {
+    width: 30%;
+}
+
+.home-blocks .block.sm {
+    width: 20%;
+}
+
+.home-blocks .block .image {
+    height: 270px;
+    background-size: cover !important;
+    background-position: center center !important;
+}
+
+.home-blocks .block .title {
+    background: #000;
+    padding: 10px;
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+}
+
+.home-blocks .block:hover .title {
+    transform: translate(0, -39px);
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+}
+
+.home-blocks .block .title a {
+    color: #fff;
+}
+
+.home-blocks .block.lg {
+    -webkit-animation-delay: 200ms;
+    animation-delay: 200ms;
+}
+
+.home-blocks .block.md {
+    -webkit-animation-delay: 500ms;
+    animation-delay: 500ms;
+}
+
+.home-blocks .block.sm {
+    -webkit-animation-delay: 800ms;
+    animation-delay: 800ms;
+}
+
+.home-blocks .block .veil {
+    background: #000;
+    opacity: 0.3;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    position: absolute;
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+}
+
+.home-blocks .block:hover .veil {
+    opacity: 0;
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+}
