@@ -215,3 +215,27 @@ footer {
     -moz-transition: all 500ms ease-in-out;
     transition: all 500ms ease-in-out;
 }
+
+.home-poll {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.poll-container {
+    display: flex;
+}
+
+.poll-container .poll-item {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.poll-container .poll-item img {
+    width: 80%;
+}
+
+.poll-container .poll-item div {
+    font-family: 'Fjalla One';
+    font-size: 18px;
+}
