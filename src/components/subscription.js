@@ -84,7 +84,7 @@ class Subscriptions extends Component {
                         </div>
                     </form>
                     <small>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem, repellendus eaque! Ad, voluptatibus libero delectus sint, minima eius at saepe doloremque ex aliquam distinctio? Consequatur saepe accusamus accusantium quidem eaque.    
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem, repellendus eaque! Ad, voluptatibus libero delectus sint. 
                     </small>
                 </div>
             </div>
