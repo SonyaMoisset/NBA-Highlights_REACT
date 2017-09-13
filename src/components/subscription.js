@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 
-class Subscription extends Component {
+class Subscriptions extends Component {
     constructor(props) {
         super(props)
         
         this.state = {
-            email: ''
+            email: '',
+            error: false,
+            success: false
         }
     }
 
@@ -23,19 +25,35 @@ class Subscription extends Component {
             .then(response => response.json())
             .then(() => {
                 this.setState({
-                email: ''
+                    email: '',
+                    success: true    
             })
         })
     }
 
+    clearMessages = () => {
+        setTimeout(() => {
+            this.setState({
+                error: false,
+                success: false
+            })
+        }, 3000)
+    }
+
     handleSubmit = (event) => {
         event.preventDefault()
+
         let email = this.state.email
         let regex = /\S+@\S+\.\S+/
 
         if (regex.test(email)) {
             this.saveSubscription(email)
+        } else {
+            this.setState({
+                error: true
+            })
         }
+        this.clearMessages()
     }
 
     onChangeInput = (event) => {
@@ -55,7 +73,15 @@ class Subscription extends Component {
                             placeholder="youremail@email.com"
                             value={this.state.email}
                             onChange={this.onChangeInput}
-                        />    
+                        />
+                        <div
+                            className={this.state.error ? 'error show' : 'error'}>
+                            Check your email
+                        </div>
+                        <div
+                            className={this.state.success ? 'success show' : 'success'}>
+                            Thank you
+                        </div>
                     </form>
                     <small>
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem, repellendus eaque! Ad, voluptatibus libero delectus sint, minima eius at saepe doloremque ex aliquam distinctio? Consequatur saepe accusamus accusantium quidem eaque.    
@@ -66,4 +92,4 @@ class Subscription extends Component {
     }
 }
 
-export default Subscription;
+export default Subscriptions;
