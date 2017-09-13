@@ -10,7 +10,22 @@ class Subscription extends Component {
     }
 
     saveSubscription = (email) => {
+        const URL_EMAIL = `http://localhost:3004/subcriptions`
 
+        fetch(URL_EMAIL, {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({email})
+        })
+            .then(response => response.json())
+            .then(() => {
+                this.setState({
+                email: ''
+            })
+        })
     }
 
     handleSubmit = (event) => {
