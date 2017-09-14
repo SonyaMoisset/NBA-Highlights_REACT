@@ -1,0 +1,45 @@
+.subscribe-panel .error {
+    display: none;
+    color: #f44336;
+}
+
+.subscribe-panel .success {
+    display: none;
+    color: #4caf50;
+}
+
+.subscribe-panel .error.show,
+.subscribe-panel .success.show {
+    display: block;
+}
+
+.subscribe-panel {
+    text-align: center;
+    width: 350px;
+    margin: 0 auto;
+}
+
+.subscribe-panel h3 {
+    font-family: 'Fjalla One';
+    font-size: 35px;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+.subscribe-panel input {
+    border-radius: 20px;
+    border: 3px solid #ddd;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.subscribe-panel input:focus {
+    outline-width: 0;
+}
+
+.subscribe-panel small {
+    font-size: 10px;
+    line-height: 0;
+}

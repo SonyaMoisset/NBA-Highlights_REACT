@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+    color: #1b1b1b;
+}
+
+a {
+    text-decoration: none;
+}
+
+h3 {
+    font-family: 'Fjalla One';
+    font-size: 35px;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+h4 {
+    font-family: 'Fjalla One';
+    font-size: 20px;
+    margin: 15px 0 5px;
+}
+
+.flexbox-container {
+    display: flex;
+}

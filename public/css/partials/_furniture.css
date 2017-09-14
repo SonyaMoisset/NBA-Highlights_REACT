@@ -1,0 +1,30 @@
+header {
+    border-bottom: 1px solid #e2e2e2;
+}
+
+header,
+footer {
+    background: #fff;
+    align-items: center;
+    padding: 10px;
+    font-family: 'Fjalla One';
+}
+
+header .logo,
+footer .logo {
+    flex-grow: 1;
+    height: 22px;
+}
+
+header .logo span,
+footer .logo span {
+    background: url('/images/logo.png') no-repeat;
+    display: inline-block;
+    width: 58px;
+    height: 24px;
+}
+
+footer {
+    background: #1f1f1f;
+    margin-top: 30px;
+}
