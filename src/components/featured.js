@@ -14,7 +14,7 @@ const generateSlides = ({slides}) => {
     if (slides) {
         return (
             <Slider {...settings}>
-                {slides.map((slide) => {
+                {slides.map(slide => {
                     return (
                         <div
                             key={slide.id}
@@ -32,8 +32,7 @@ const generateSlides = ({slides}) => {
     }
 }
 
-const Featured = (props) => {
-
+const Featured = props => {
     return (
         <div>
             {generateSlides(props)}    

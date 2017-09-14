@@ -7,8 +7,8 @@ import Home from './home'
 import Teams from './teams'
 import Team from './team'
 
-class App extends Component {
-    render() {
+export default class App extends Component {
+    render = () => {
         return (
             <BrowserRouter>
                 <div>
@@ -22,5 +22,3 @@ class App extends Component {
         )
     }
 }
-
-export default App

@@ -14,7 +14,7 @@ const fadeAnimation = {
     transitionLeaveTimeout: 500
 }
 
-class Teams extends Component {
+export default class Teams extends Component {
     constructor(props) {
         super(props)
 
@@ -25,56 +25,45 @@ class Teams extends Component {
         }
     }
 
-    componentDidMount() {
-        fetch(URL_TEAMS, {
-            method: 'GET'
-        })
-            .then(response => response.json())
-            .then(json => {
-                this.setState({
-                    teams: json,
-                    filtered: json
-            })
-        })
+    componentDidMount = () => {
+        fetch(URL_TEAMS, { method: 'GET' })
+        .then(teams => teams.json())
+        .then(teams => { this.setState({ teams, filtered: teams }) })
     }
 
     renderList = ({filtered}) => {
-        return filtered.map((team) => {
+        return filtered.map(team => {
             return (
                 <Link
                     to={`/team/${team.name}`}
                     key={team.id}
-                    className="team-item"
-                >
+                    className="team-item">
                     <img
                         alt={team.name}
-                        src={`/images/teams/${team.logo}`}
-                    />    
+                        src={`/images/teams/${team.logo}`}/>    
                 </Link>
             )
         })
     }
 
-    searchTeam = (event) => {
+    searchTeam = event => {
         const keyword = event.target.value
 
         if (keyword !== '') {
-            const list = this.state.teams.filter((team) => {
+            const list = this.state.teams.filter(team => {
                 return team.name.toLowerCase().indexOf(keyword.toLowerCase()) > -1 
             })
-            this.setState({
-                filtered: list,
-                keyword
-            })
+            this.setState({ filtered: list, keyword })
         } else {
-            this.setState({
-                filtered: this.state.teams,
-                keyword
-            })
+            this.setState({ filtered: this.state.teams, keyword })
         }
     }
 
-    render() {
+    handleChange = event => {
+        this.searchTeam(event)
+    }
+
+    render = () => {
         return (
             <div className="teams-component">
                 <div className="teams-input">
@@ -82,8 +71,7 @@ class Teams extends Component {
                         value={this.state.keyword}    
                         type="text"
                         placeholder="Search for a team"
-                        onChange={e => this.searchTeam(e)}
-                    />    
+                        onChange={this.handleChange}/>    
                 </div>
                 <div className="teams-container">
                     <CSSTransitionGroup {...fadeAnimation}>
@@ -94,5 +82,3 @@ class Teams extends Component {
         );
     }
 }
-
-export default Teams;

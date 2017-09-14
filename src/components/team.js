@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 const URL_TEAM = `http://localhost:3004/teams`
 
-class Team extends Component {
+export default class Team extends Component {
     constructor(props) {
         super(props)
 
@@ -11,29 +11,21 @@ class Team extends Component {
         }
     }
     
-    componentDidMount() {
-        fetch(`${URL_TEAM}?name=${this.props.match.params.id}`, {
-            method: 'GET'
-        })
-            .then(response => response.json())
-            .then(json => {
-                this.setState({
-                    data: json
-            })
-        })
+    componentDidMount = () => {
+        fetch(`${URL_TEAM}?name=${this.props.match.params.id}`, { method: 'GET' })
+        .then(data => data.json())
+        .then(data => { this.setState({ data }) })
     }
 
-    renderSquad = (squad) => {
-        return squad.map((item) => {
+    renderSquad = squad => {
+        return squad.map(item => {
             return (
                 <div
                     key={item.name}
-                    className="item player-wrapper"
-                >
+                    className="item player-wrapper">
                     <img
                         alt={item.name}
-                        src={`/images/avatar.png`}
-                    />
+                        src={`/images/avatar.png`}/>
                     <h4>{item.name}</h4>
                     <div className="node">
                         <span>Number:</span>{item.number}
@@ -53,17 +45,15 @@ class Team extends Component {
     }
 
     renderData = ({data}) => {
-        return data.map((item) => {
+        return data.map(item => {
             return (
                 <div
                     key={item.id}
-                    className="team-data-wrapper"
-                >
+                    className="team-data-wrapper">
                     <div className="left">
                         <img
                             alt={item.name}
-                            src={`/images/teams/${item.logo}`}
-                        />
+                            src={`/images/teams/${item.logo}`}/>
                     </div>
                     <div className="right">
                         <h1>{item.name}</h1>
@@ -78,7 +68,7 @@ class Team extends Component {
         })
     }
 
-    render() {
+    render = () => {
         return (
             <div className="team-data">
                 {this.renderData(this.state)}
@@ -86,5 +76,3 @@ class Team extends Component {
         );
     }
 }
-
-export default Team;

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 const URL_TEAMS = `http://localhost:3004/teams`
 
-class Poll extends Component {
+export default class Poll extends Component {
     constructor(props) {
         super(props)
         
@@ -11,20 +11,14 @@ class Poll extends Component {
         }
     }
 
-    fetchPoll = () => {
-        fetch(`${URL_TEAMS}?poll=true&_sort=count&_order=desc`, {
-            method: 'GET'
-        })
-            .then(response => response.json())
-            .then(json => {
-                this.setState({
-                    pollTeams: json
-                })
-            })
+    componentDidMount = () => {
+        this.fetchPoll()
     }
 
-    componentDidMount() {
-        this.fetchPoll()
+    fetchPoll = () => {
+        fetch(`${URL_TEAMS}?poll=true&_sort=count&_order=desc`, { method: 'GET' })
+        .then(pollTeams => pollTeams.json())
+        .then(pollTeams => { this.setState({ pollTeams }) })
     }
 
     addCount = (count, id) => {
@@ -38,15 +32,17 @@ class Poll extends Component {
                 count: count + 1
             })
         })
-            .then(() => {
+        .then(() => {
             this.fetchPoll()
         })
     }
 
-    renderPoll = () => {
+    renderPoll = teams => {
+        if (!teams) return ''
+
         const position = ['1ST', '2ND', '3RD']
 
-        return this.state.pollTeams.map((team, index) => {
+        return teams.map((team, index) => {
             return (
                 <div
                     key={team.id}
@@ -60,7 +56,7 @@ class Poll extends Component {
         })
     }
  
-    render() {
+    render = () => {
         return (
             <div className="home-poll">
                 <h3>Who will be the next champion ?</h3>
@@ -71,5 +67,3 @@ class Poll extends Component {
         );
     }
 }
-
-export default Poll;

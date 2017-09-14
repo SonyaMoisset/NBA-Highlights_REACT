@@ -7,8 +7,7 @@ import Poll from './poll'
 
 const URL_HOME = `http://localhost:3004/home`;
 
-class Home extends Component {
-
+export default class Home extends Component {
     constructor(props) {
         super(props)
 
@@ -17,19 +16,13 @@ class Home extends Component {
         }
     }
 
-    componentDidMount() {
-        fetch(URL_HOME, {
-            method: "GET"
-        })
-            .then(response => response.json())
-            .then(json => {
-                this.setState({
-                    home: json
-                })   
-        })
+    componentDidMount = () => {
+        fetch(URL_HOME, { method: "GET" })
+        .then(home => home.json())
+        .then(home => { this.setState({ home }) })
     }
 
-    render() {
+    render = () => {
         return (
             <div>
                 <Featured slides={this.state.home.slider} /> 
@@ -40,5 +33,3 @@ class Home extends Component {
         )
     }
 }
-
-export default Home

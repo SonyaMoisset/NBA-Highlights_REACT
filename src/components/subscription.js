@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Subscriptions extends Component {
+export default class Subscriptions extends Component {
     constructor(props) {
         super(props)
         
@@ -11,7 +11,7 @@ class Subscriptions extends Component {
         }
     }
 
-    saveSubscription = (email) => {
+    saveSubscription = email => {
         const URL_EMAIL = `http://localhost:3004/subcriptions`
 
         fetch(URL_EMAIL, {
@@ -22,11 +22,11 @@ class Subscriptions extends Component {
             },
             body: JSON.stringify({email})
         })
-            .then(response => response.json())
-            .then(() => {
-                this.setState({
-                    email: '',
-                    success: true    
+        .then(response => response.json())
+        .then(() => {
+            this.setState({
+                email: '',
+                success: true    
             })
         })
     }
@@ -40,7 +40,7 @@ class Subscriptions extends Component {
         }, 3000)
     }
 
-    handleSubmit = (event) => {
+    handleSubmit = event => {
         event.preventDefault()
 
         let email = this.state.email
@@ -56,13 +56,13 @@ class Subscriptions extends Component {
         this.clearMessages()
     }
 
-    onChangeInput = (event) => {
+    onChangeInput = event => {
         this.setState({
             email: event.target.value
         })
     }
 
-    render() {
+    render = () => {
         return (
             <div className="subscribe-panel">
                 <h3>Subscribe to us</h3>
@@ -72,8 +72,7 @@ class Subscriptions extends Component {
                             type="text"
                             placeholder="youremail@email.com"
                             value={this.state.email}
-                            onChange={this.onChangeInput}
-                        />
+                            onChange={this.onChangeInput}/>
                         <div
                             className={this.state.error ? 'error show' : 'error'}>
                             Check your email
@@ -91,5 +90,3 @@ class Subscriptions extends Component {
         );
     }
 }
-
-export default Subscriptions;
