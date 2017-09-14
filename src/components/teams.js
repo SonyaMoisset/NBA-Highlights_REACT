@@ -21,7 +21,7 @@ class Teams extends Component {
         this.state = {
             teams: [],
             filtered: [],
-            keyworkds: ''
+            keyword: ''
         }
     }
 
@@ -55,13 +55,34 @@ class Teams extends Component {
         })
     }
 
+    searchTeam = (event) => {
+        const keyword = event.target.value
+
+        if (keyword !== '') {
+            const list = this.state.teams.filter((team) => {
+                return team.name.toLowerCase().indexOf(keyword.toLowerCase()) > -1 
+            })
+            this.setState({
+                filtered: list,
+                keyword
+            })
+        } else {
+            this.setState({
+                filtered: this.state.teams,
+                keyword
+            })
+        }
+    }
+
     render() {
         return (
             <div className="teams-component">
                 <div className="teams-input">
                     <input
+                        value={this.state.keyword}    
                         type="text"
                         placeholder="Search for a team"
+                        onChange={e => this.searchTeam(e)}
                     />    
                 </div>
                 <div className="teams-container">
