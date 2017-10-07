@@ -3,12 +3,12 @@ import { BrowserRouter, Route } from 'react-router-dom'
 
 import Header from './header'
 import Footer from './footer'
-import Home from './home'
+import Home from '../containers/Home'
 import Teams from './teams'
 import Team from './team'
 
 export default class App extends Component {
-    render = () => {
+    render() {
         return (
             <BrowserRouter>
                 <div>

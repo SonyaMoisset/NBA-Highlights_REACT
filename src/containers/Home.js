@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 
-import Featured from './featured'
-import Subscriptions from './subscription'
-import Blocks from './blocks'
-import Poll from './poll'
+import Featured from '../components/featured'
+import Subscriptions from '../components/subscription'
+import Blocks from '../components/blocks'
+import Poll from '../components/poll'
 
 const URL_HOME = `http://localhost:3004/home`;
 
