@@ -63,22 +63,20 @@ export default class Teams extends Component {
         this.searchTeam(event)
     }
 
-    render = () => {
-        return (
-            <div className="teams-component">
-                <div className="teams-input">
-                    <input
-                        value={this.state.keyword}    
-                        type="text"
-                        placeholder="Search for a team"
-                        onChange={this.handleChange}/>    
-                </div>
-                <div className="teams-container">
-                    <CSSTransitionGroup {...fadeAnimation}>
-                        {this.renderList(this.state)}
-                    </CSSTransitionGroup>
-                </div>
+    render = () => (
+        <div className="teams-component">
+            <div className="teams-input">
+                <input
+                    value={this.state.keyword}    
+                    type="text"
+                    placeholder="Search for a team"
+                    onChange={this.handleChange}/>    
             </div>
-        );
-    }
+            <div className="teams-container">
+                <CSSTransitionGroup {...fadeAnimation}>
+                    {this.renderList(this.state)}
+                </CSSTransitionGroup>
+            </div>
+        </div>
+    )
 }

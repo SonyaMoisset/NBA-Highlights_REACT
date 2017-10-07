@@ -56,14 +56,12 @@ export default class Poll extends Component {
         })
     }
  
-    render = () => {
-        return (
-            <div className="home-poll">
-                <h3>Who will be the next champion ?</h3>
-                <div className="poll-container">
-                    {this.renderPoll(this.state.pollTeams)}    
-                </div> 
-            </div>
-        );
-    }
+    render = () =>  (
+        <div className="home-poll">
+            <h3>Who will be the next champion ?</h3>
+            <div className="poll-container">
+                {this.renderPoll(this.state.pollTeams)}    
+            </div> 
+        </div>
+    )
 }

@@ -1,11 +1,8 @@
 import React, { Component } from 'react'
 import { BrowserRouter, Route } from 'react-router-dom'
 
-import Header from './header'
-import Footer from './footer'
-import Home from '../containers/Home'
-import Teams from './teams'
-import Team from './team'
+import { Header, Footer, Teams, Team } from '../components'
+import { Home } from '../containers'
 
 export default class App extends Component {
     render() {

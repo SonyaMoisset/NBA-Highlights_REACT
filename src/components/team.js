@@ -44,7 +44,7 @@ export default class Team extends Component {
         })
     }
 
-    renderData = ({data}) => {
+    renderData = ({ data }) => {
         return data.map(item => {
             return (
                 <div
@@ -68,11 +68,9 @@ export default class Team extends Component {
         })
     }
 
-    render = () => {
-        return (
-            <div className="team-data">
-                {this.renderData(this.state)}
-            </div>
-        );
-    }
+    render = () => (
+        <div className="team-data">
+            {this.renderData(this.state)}
+        </div>
+    )
 }

@@ -32,12 +32,10 @@ const generateSlides = ({slides}) => {
     }
 }
 
-const Featured = props => {
-    return (
-        <div>
-            {generateSlides(props)}    
-        </div>
-    )
-}
+const Featured = props =>  (
+    <div>
+        {generateSlides(props)}    
+    </div>
+)
 
 export default Featured

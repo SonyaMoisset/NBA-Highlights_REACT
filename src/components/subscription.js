@@ -62,31 +62,29 @@ export default class Subscriptions extends Component {
         })
     }
 
-    render = () => {
-        return (
-            <div className="subscribe-panel">
-                <h3>Subscribe to us</h3>
-                <div>
-                    <form onSubmit={this.handleSubmit}>
-                        <input
-                            type="text"
-                            placeholder="youremail@email.com"
-                            value={this.state.email}
-                            onChange={this.onChangeInput}/>
-                        <div
-                            className={this.state.error ? 'error show' : 'error'}>
-                            Check your email
-                        </div>
-                        <div
-                            className={this.state.success ? 'success show' : 'success'}>
-                            Thank you
-                        </div>
-                    </form>
-                    <small>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem, repellendus eaque! Ad, voluptatibus libero delectus sint. 
-                    </small>
-                </div>
+    render = () => (
+        <div className="subscribe-panel">
+            <h3>Subscribe to us</h3>
+            <div>
+                <form onSubmit={this.handleSubmit}>
+                    <input
+                        type="text"
+                        placeholder="youremail@email.com"
+                        value={this.state.email}
+                        onChange={this.onChangeInput}/>
+                    <div
+                        className={this.state.error ? 'error show' : 'error'}>
+                        Check your email
+                    </div>
+                    <div
+                        className={this.state.success ? 'success show' : 'success'}>
+                        Thank you
+                    </div>
+                </form>
+                <small>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem, repellendus eaque! Ad, voluptatibus libero delectus sint. 
+                </small>
             </div>
-        );
-    }
+        </div>
+    )
 }

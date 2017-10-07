@@ -1,15 +1,13 @@
 import React from 'react'
 
-const Footer = () => {
-    return (
-        <footer>
-            <div className="flexbox-container">
-                <div className="logo">
-                    <span></span>    
-                </div>
+const Footer = () => (
+    <footer>
+        <div className="flexbox-container">
+            <div className="logo">
+                <span></span>    
             </div>
-        </footer>
-    )
-}
+        </div>
+    </footer>
+)
 
 export default Footer

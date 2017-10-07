@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import Reveal from 'react-reveal'
 import 'animate.css/animate.css'
 
-const generateBlocks = ({blocks}) => {
+const generateBlocks = ({ blocks }) => {
     if (blocks) {
         return blocks.map(block => {
             return (
@@ -25,12 +25,10 @@ const generateBlocks = ({blocks}) => {
     }
 }
 
-const Blocks = props => {
-    return(
-        <div className="home-blocks">
-            {generateBlocks(props)}    
-        </div>
-    )
-}
+const Blocks = props => (
+    <div className="home-blocks">
+        {generateBlocks(props)}    
+    </div>
+)
 
 export default Blocks
