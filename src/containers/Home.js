@@ -1,30 +1,39 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { getHome, requestSlider, requestBlocks } from '../actions/home_actions'
+import { bindActionCreators } from 'redux'
 
 import { Blocks, Featured, Poll, Subscription } from '../components'
 
-const URL_HOME = `http://localhost:3004/home`;
+class Home extends Component {
 
-export default class Home extends Component {
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            home: ''
-        }
+    componentDidMount() {
+        this.props.getHome()
+        this.props.requestSlider()
+        this.props.requestBlocks()
     }
-
-    componentDidMount = () => {
-        fetch(URL_HOME, { method: "GET" })
-            .then(home => home.json())
-            .then(home => { this.setState({ home }) })
+    
+    render() {
+        return (
+            <div>
+                <Featured slides={this.props.home.slider} />
+                <Subscription />
+                <Blocks blocks={this.props.home.blocks} />
+                <Poll />
+            </div>
+        )
     }
-
-    render = () => (
-        <div>
-            <Featured slides={this.state.home.slider} />
-            <Subscription />
-            <Blocks blocks={this.state.home.blocks} />
-            <Poll />
-        </div>
-    )
+    
 }
+
+function mapStateToProps(state) {
+    return {
+        home: state.home
+    }
+}
+
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({ getHome, requestSlider, requestBlocks }, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home)

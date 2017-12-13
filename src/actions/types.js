@@ -1,1 +1,3 @@
-export const GET_HOME = 'get_home'
+export const GET_HOME = 'GET_HOME'
+export const REQUEST_SLIDER = 'REQUEST_SLIDER'
+export const REQUEST_BLOCKS = 'REQUEST_BLOCKS'
