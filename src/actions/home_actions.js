@@ -1,37 +1,37 @@
 import {
-    GET_HOME,
-    REQUEST_SLIDER,
-    REQUEST_BLOCKS
+    FETCH_HOMEPAGE,
+    SLIDER_INFO,
+    BLOCKS_INFO
 } from './types'
 
-export const getHome = () => {
+export const fetchHomepage = () => {
     const request = fetch(`http://localhost:3004/home`, { method: 'GET' })
         .then(response => response.json())
     
     return {
-        type: GET_HOME,
+        type: FETCH_HOMEPAGE,
         payload: request
     }
 }
 
-export const requestSlider = () => {
+export const slides = () => {
     const request = fetch(`http://localhost:3004/home`, { method: 'GET' })
         .then(response => response.json())
         .then(data => data.slider)
     
     return {
-        type: REQUEST_SLIDER,
+        type: SLIDER_INFO,
         payload: request
     }
 }
 
-export const requestBlocks = () => {
+export const blocks = () => {
     const request = fetch(`http://localhost:3004/home`, { method: 'GET' })
         .then(response => response.json())
         .then(data => data.blocks)
     
     return {
-        type: REQUEST_BLOCKS,
+        type: BLOCKS_INFO,
         payload: request
     }
 }

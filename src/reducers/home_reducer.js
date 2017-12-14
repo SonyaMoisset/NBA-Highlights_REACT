@@ -1,22 +1,22 @@
 import {
-    GET_HOME,
-    REQUEST_SLIDER,
-    REQUEST_BLOCKS
+    FETCH_HOMEPAGE,
+    SLIDER_INFO,
+    BLOCKS_INFO
 } from '../actions/types'
 
 export default function (state = {}, action) {
     switch (action.type) {
-        case GET_HOME:
+        case FETCH_HOMEPAGE:
             return {
                 ...state,
-                home: action.payload
+                homepage: action.payload
             }  
-        case REQUEST_SLIDER:
+        case SLIDER_INFO:
             return {
                 ...state,
-                slider: action.payload
+                slides: action.payload
             }  
-        case REQUEST_BLOCKS:
+        case BLOCKS_INFO:
             return {
                 ...state,
                 blocks: action.payload
