@@ -10,7 +10,7 @@ const settings = {
     slidesToScroll: 1
 }
 
-const generateSlides = ({slides}) => {
+const showSlides = ({slides}) => {
     if (slides) {
         return (
             <Slider {...settings}>
@@ -32,9 +32,9 @@ const generateSlides = ({slides}) => {
     }
 }
 
-const Featured = props =>  (
+const Featured = slides =>  (
     <div>
-        {generateSlides(props)}    
+        {showSlides(slides)}    
     </div>
 )
 
