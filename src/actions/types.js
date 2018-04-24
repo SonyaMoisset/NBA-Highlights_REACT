@@ -1,5 +1,5 @@
-export const FETCH_HOMEPAGE = 'FETCH_HOMEPAGE'
-export const SLIDER_INFO = 'SLIDER_INFO'
-export const BLOCKS_INFO = 'BLOCKS_INFO'
+export const FETCH_HOMEPAGE = "FETCH_HOMEPAGE";
+export const SLIDER_INFO = "SLIDER_INFO";
+export const BLOCKS_INFO = "BLOCKS_INFO";
 
-export const GET_TEAM_PROFILE = 'GET_TEAM_PROFILE'
+export const GET_TEAM_PROFILE = "GET_TEAM_PROFILE";
