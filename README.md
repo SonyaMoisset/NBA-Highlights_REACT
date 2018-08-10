@@ -21,10 +21,11 @@ To see the project:
 - Save data to DB
 - Poll to choose best teams
 
-### A user can see NBA highlights
-### A user can see a list of NBA teams
-### A user can search for his/her favorite team
-### A user can see a team profile
-### Validation message for subscription emails  
+## Features
+- A user can see NBA highlights
+- A user can see a list of NBA teams
+- A user can search for his/her favorite team
+- A user can see a team profile
+- Validation message for subscription emails  
 
-<img width="400" src="https://github.com/SonyaMoisset/nba_highlights-react/blob/master/homepage.png"> <img width="400" src="https://github.com/SonyaMoisset/nba_highlights-react/blob/master/teams.png"> <img width="400" src="https://github.com/SonyaMoisset/nba_highlights-react/blob/master/search.png"> <img width="400" src="https://github.com/SonyaMoisset/nba_highlights-react/blob/master/team.png"> <img width="400" src="https://github.com/SonyaMoisset/nba_highlights-react/blob/master/validation.png">
+<img width="400" src="https://github.com/SonyaMoisset/nba_highlights-react/blob/master/homepage.png"> <img width="400" src="https://github.com/SonyaMoisset/nba_highlights-react/blob/master/teams.png"> <img width="400" src="https://github.com/SonyaMoisset/nba_highlights-react/blob/master/search.png"> <img width="400" src="https://github.com/SonyaMoisset/nba_highlights-react/blob/master/validation.png"> <img width="400" src="https://github.com/SonyaMoisset/nba_highlights-react/blob/master/team.png">
