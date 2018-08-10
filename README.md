@@ -22,16 +22,9 @@ To see the project:
 - Poll to choose best teams
 
 ### A user can see NBA highlights
-![Home](https://github.com/SonyaMoisset/nba_highlights-react/blob/master/homepage.png)     
-
 ### A user can see a list of NBA teams
-![Teams](https://github.com/SonyaMoisset/nba_highlights-react/blob/master/teams.png) 
-
 ### A user can search for his/her favorite team
-![Search](https://github.com/SonyaMoisset/nba_highlights-react/blob/master/search.png)
-
 ### A user can see a team profile
-![Team](https://github.com/SonyaMoisset/nba_highlights-react/blob/master/team.png)
+### Validation message for subscription emails  
 
-### Validation message for subscription emails
-![Validation](https://github.com/SonyaMoisset/nba_highlights-react/blob/master/validation.png)
+<img width="400" src="https://github.com/SonyaMoisset/nba_highlights-react/blob/master/homepage.png"> <img width="400" src="https://github.com/SonyaMoisset/nba_highlights-react/blob/master/teams.png"> <img width="400" src="https://github.com/SonyaMoisset/nba_highlights-react/blob/master/search.png"> <img width="400" src="https://github.com/SonyaMoisset/nba_highlights-react/blob/master/team.png"> <img width="400" src="https://github.com/SonyaMoisset/nba_highlights-react/blob/master/validation.png">
