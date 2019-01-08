@@ -5836,11 +5836,10 @@ react-redux@5.1.1:
     react-is "^16.6.0"
     react-lifecycles-compat "^3.0.0"
 
-react-reveal@0.7.3:
-  version "0.7.3"
-  resolved "https://registry.yarnpkg.com/react-reveal/-/react-reveal-0.7.3.tgz#4b7265b48251813acf735ab862d1687ad85d4570"
+react-reveal@1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/react-reveal/-/react-reveal-1.2.2.tgz#f47fbc44debc4c185ae2163a215a9e822c7adfef"
   dependencies:
-    babel-runtime "^6.26.0"
     prop-types "^15.5.10"
 
 react-router-dom@4.2.2:
