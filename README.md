@@ -1,5 +1,7 @@
 # NBA Highlights
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/SonyaMoisset/NBA-Highlights_REACT.svg)](https://greenkeeper.io/)
+
 ## A React web application where NBA highlights are fetched from a json file
 
 To see the project:
