@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "animate.css": "3.7.0",
-    "react": "16.8.6",
+    "react": "16.9.0",
     "react-dom": "16.8.6",
     "react-reveal": "1.2.2",
     "react-router-dom": "4.3.1",
