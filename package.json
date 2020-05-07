@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "animate.css": "3.7.0",
+    "animate.css": "4.0.0",
     "react": "16.9.0",
     "react-dom": "16.9.0",
     "react-reveal": "1.2.2",
